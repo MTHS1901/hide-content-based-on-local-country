@@ -3,11 +3,14 @@ HTML + Javascript (jquery) para ocultar uma div em um pais especifico.
 
 #### API: https://freegeoip.app/
 #### Jquery: https://code.jquery.com/
+#### Você pode criar suas proprias variaveis de PAISES e ESTADOS usando o IF e ELSE do SCRIPT.
 
 ### BRINQUE COM O CODIGO AQUI: https://www.w3schools.com/code/tryit.asp?filename=GDWGAD4FTESB
+
 ### EXEMPLO:
 ##### Nota: o pais é definido por duas siglas ex: BRASIL= BR, ESTADOS UNIDOS= US, veja: https://www.iban.com/country-codes
-```
+Exemplo: 
+´´´
 <html>
 <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 <div id="conteudo">
@@ -16,7 +19,6 @@ HTML + Javascript (jquery) para ocultar uma div em um pais especifico.
 <script>
 $(function() {
     $.getJSON('https://freegeoip.app/json/', function(data) {
-    // CODIGO DO PAIS DEFINIDO COM DUAS SIGLAS (ex: BRASIL= BR, ESTADOS UNIDOS= US)
         if (data.country_code == 'BR') {
             $('#conteudo').show();
         }else{
@@ -26,5 +28,19 @@ $(function() {
 });
 </script>
 </html>
-´´´´
-## Duvidas? www.mths1901.com/suporte
+```
+#### É possivel ocultar em um ESTADO especifico do pais adicionando o codigo "region_code"
+### EXEMPLO:
+##### O exemplo abaixo exibe o conteudo apenas em são paulo, caso contrario é ocultado.
+´´´
+$(function() {
+    $.getJSON('https://freegeoip.app/json/', function(data) {
+        if (data.country_code == 'BR')
+        (data.region_code == 'SP') {
+            $('#conteudo').show();
+        }else{
+            $('#conteudo').fadeOut();
+        }
+    });
+});
+```
