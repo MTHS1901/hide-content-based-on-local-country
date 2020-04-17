@@ -1,4 +1,4 @@
-# OCULTAR CONTEUDO HTML EM UM PAIS ESPECIFICO
+# OCULTAR CONTEUDO HTML EM UM PAIS OU ESTADO ESPECIFICO
 HTML + Javascript (jquery) para ocultar uma div em um pais especifico.
 
 #### API: https://freegeoip.app/
