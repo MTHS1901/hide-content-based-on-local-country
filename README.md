@@ -11,26 +11,4 @@ HTML + Javascript (jquery) to hide a div in a specific country.
 
 #### You can create your own COUNTRY and STATE variables using SCRIPT's IF and ELSE.
 
-Example:
-
-``
-<html>
-<script src = "https://code.jquery.com/jquery-3.5.0.min.js" integrity = "sha256-xNzN2a4ltkB44Mc / Jz3pT4iU1cmeR0FkXs4pru / JxaQ =" crossorigin = "anonymous"> </script>
-<div id = "content">
-<p> YOU'RE SEEING THIS WHY YOU ARE IN BRAZIL </p>
-</div>
-<script>
-$ (function () {
-    $ .getJSON ('https://freegeoip.app/json/', function (data) {
-        if (data.country_code == 'BR') {
-            $ ('# content'). show ();
-        } else {
-            $ ('# content'). fadeOut ();
-        }
-    });
-});
-</script>
-</html>
-``
-
 by MTHS1901 - www.mths1901.com
