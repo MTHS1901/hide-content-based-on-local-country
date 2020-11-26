@@ -1,5 +1,5 @@
-# HIDE HTML CONTENT IN A SPECIFIC PARENT OR STATE
-HTML + Javascript (jquery) to hide a div in a specific country.
+# HIDE HTML CONTENT IN A SPECIFIC COUNTRY OR STATE
+HTML + Javascript (jquery) to hide a div in a specific country/state.
 
 #### API: https://freegeoip.app/
 #### Jquery: https://code.jquery.com/
