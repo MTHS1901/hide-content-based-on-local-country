@@ -1,0 +1,37 @@
+<html>
+<!-- MADE BY MTHS1901.COM -->
+<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+<!-- SHOW BOB SPONGE IF COUNTRY MATCH -->
+
+<div id="bobSponge" style="display:none;text-align:center">
+<img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1200px-SpongeBob_SquarePants_character.svg.png" height="250px">
+</div>
+
+<!-- SHOW Mollusc Squid IF COUNTRY NOT MATCH -->
+
+<div id="MolluscSquid" style="display:none;text-align:center">
+<img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/Squidward_Tentacles.svg/1200px-Squidward_Tentacles.svg.png" height="250px">
+</div>
+
+<script>
+$(function() {
+    $.getJSON('https://freegeoip.app/json/', function(data) {
+    // EDIT COUNTRY CODE HERE
+        if (data.country_code == 'US') {
+        // WHAT HAPPENS IF COUNTRY CODE MATCH
+            document.getElementById("bobSponge").style.display = "block";
+            document.getElementById("MolluscSquid").style.display = "none";
+            alert("You are seeing SpongeBob because his country is defined in JavaScript.");
+        }else{
+        // WHAT HAPPENS IF COUNTRY CODE DOESN'T MATCH
+            document.getElementById("MolluscSquid").style.display = "block";
+            document.getElementById("bobSponge").style.display = "none";
+            alert("You are seeing MolluscSquid because his country is NOT defined in JavaScript.");
+        }
+    });
+});
+</script>
+
+
+</html>
