@@ -4,7 +4,7 @@ HTML + Javascript (jquery) to hide a div in a specific country/state.
 #### API: https://freegeoip.app/
 #### Jquery: https://code.jquery.com/
 
-### PLAY WITH THE CODE HERE: https://www.w3schools.com/code/tryit.asp?filename=GDWGAD4FTESB
+### PLAY WITH THE CODE HERE: https://www.w3schools.com/code/tryit.asp?filename=GOCF4CO9EM27
 
 ### EXAMPLE:
 ##### Note: the country is defined by two acronyms eg BRAZIL = BR, UNITED STATES = US, see: https://www.iban.com/country-codes, you can also hide the content in a STATE specific using "(data.region_code == 'SP')" // hidden in São Paulo.
